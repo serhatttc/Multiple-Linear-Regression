@@ -93,12 +93,6 @@ model = sm.OLS(humidity,X_l).fit()
 print(model.summary())
 
 
-new_x_train = x_train.drop("Windy(False)", axis = 1)
-new_x_test = x_test.drop("Windy(False)", axis = 1)
-
-lr.fit(new_x_train,y_train)
-
-new_y_pred = lr.predict(new_x_test)
 
 
 
